@@ -101,7 +101,7 @@ public class MJActivity extends BaseActivity {
             shopactivityStr.put("shopName", "asdhfkjhasd");
             shopactivityStr.put("activityName", "asdhfkjhasd");
 
-            params.put("shopStr", shopStr);
+            params.put("shopStr", shopactivityStr);
             params.put("userId", "402880e75f000ab6015f0043a1210002");
             newCall(Config.Url.getUrl(Config.EDIT_SHOP_INFO), params);
         } catch (JSONException e) {
