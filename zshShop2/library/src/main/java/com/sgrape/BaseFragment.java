@@ -123,9 +123,6 @@ public abstract class BaseFragment extends Fragment implements Impl, View.OnClic
         return getView().getContext();
     }
 
-    public OkHttpCallback getCallback() {
-        return callback;
-    }
 
     protected void newCall(String url, Map<String, ? extends Object> params) {
         String tag = url;

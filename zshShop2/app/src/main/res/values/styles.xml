@@ -6,7 +6,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:listDivider">@drawable/shape_recycler_drivider</item>
     </style>
     <style name="translucent" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@color/translucent_background</item>

@@ -1,14 +1,14 @@
 package com.interfaceconfig;
 
 public interface Config {
-    String LOCAL_HOST = "http://192.168.0.105:8080/";
+    String LOCAL_HOST = "http://192.168.0.109:8080/";
     String HOST = "http://www.zsh7.com/";
     // 登录
     String LOGIN = "slowlife/appuser/userlogin";
     // 注册
 
     String REGISTER = "slowlife/appshop/shopregister";
-    // 验证码173
+    // 验证码
     String SMS_CODE = "slowlife/share/getsmsmobile";
     /**
      * 重设密码
@@ -144,11 +144,6 @@ public interface Config {
      * 删除店铺商品分类:
      */
     String DELETE_Classify = "slowlife/appshop/delproductclass";
-    String platformException = "slowlife/appshop/shopopinion";
-    String getPlatformException = "slowlife/appshop/shopqueryopinion";
-    String getAllStaff = "slowlife/appshop/shopgetusermessage";
-    String addStaff = "slowlife/appshop/shopadduser";
-    String alterStaff = "slowlife/appshop/shopmodifyuserstatus";
 
     static class UrlFQ {
         public static String getUrl(String url) {
@@ -161,4 +156,5 @@ public interface Config {
             return LOCAL_HOST + url;
         }
     }
+
 }

@@ -1,7 +1,6 @@
 package com.example.xxxloli.zshmerchant.fragment;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.InputType;
@@ -27,7 +26,6 @@ import com.slowlife.lib.MD5;
 import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushConfig;
 import com.tencent.android.tpush.XGPushManager;
-import com.xxx.skynet.saveData.SqliteHelper;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -136,9 +134,6 @@ public class FragLoginPwd extends BaseFragment {
                 startActivity(new Intent(getContext(), ResetPasswordActivity.class));
                 break;
             case R.id.login_bt:
-                SqliteHelper sqliteHelper = new SqliteHelper(getActivity(), User.class.getName(),null,1);
-                SQLiteDatabase db = sqliteHelper.getWritableDatabase();
-                db.close();
                 login();
                 break;
         }
@@ -183,7 +178,6 @@ public class FragLoginPwd extends BaseFragment {
                     dbManager = DBManager.getInstance(getActivity());
                     User user = new Gson().fromJson(json.getString("user"), User.class);
                     user.setWritId((long) 2333);
-
 //                    dbManager.insertUser(user);
 //                    startActivity(new Intent(getContext(), MainActivity.class));
 //                    if (getActivity() != null) getActivity().finish();

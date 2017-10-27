@@ -1,6 +1,5 @@
 package com.example.xxxloli.zshmerchant.Activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,7 +13,6 @@ import com.example.xxxloli.zshmerchant.adapter.AccountListAdapter;
 import com.example.xxxloli.zshmerchant.objectmodel.Info;
 import com.example.xxxloli.zshmerchant.view.MyListView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -40,12 +38,11 @@ public class AccountManageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_manage);
         ButterKnife.bind(this);
-        infos = new ArrayList<>();
         intoView();
     }
 
     private void intoView() {
-        if (0 == infos.size())return;
+        if (infos==null)return;
         accountListAdapter=new AccountListAdapter(this,infos);
         accountList.setAdapter(accountListAdapter);
     }
@@ -56,8 +53,7 @@ public class AccountManageActivity extends AppCompatActivity {
             case R.id.back_rl:
                 break;
             case R.id.add_registerLL:
-                startActivity(new Intent(this,LoginActivity.class));
-                //addAcount();
+                addAcount();
                 break;
             case R.id.log_out:
                 break;

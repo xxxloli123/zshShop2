@@ -15,7 +15,6 @@ import com.example.xxxloli.zshmerchant.Activity.CommodityActivity;
 import com.example.xxxloli.zshmerchant.Activity.DistributionActivity;
 import com.example.xxxloli.zshmerchant.Activity.NewMessageActivity;
 import com.example.xxxloli.zshmerchant.Activity.OrderingEvaluateActivity;
-import com.example.xxxloli.zshmerchant.Activity.PersonnelManageActivity;
 import com.example.xxxloli.zshmerchant.Activity.SettingActivity;
 import com.example.xxxloli.zshmerchant.Activity.ShopInfoActivity;
 import com.example.xxxloli.zshmerchant.BaseFragment;
@@ -91,7 +90,7 @@ public class ManageFragment extends BaseFragment {
 
     @OnClick({R.id.image_tx, R.id.shop_name, R.id.open_shop_text, R.id.printer_text, R.id.commodityLL,
             R.id.evaluateLL, R.id.billLL, R.id.analyzeLL, R.id.shop_infoLL, R.id.distributionLL, R.id.self_buildLL,
-            R.id.platformLL, R.id.linear_personnelManage,R.id.settingLL, R.id.message_number})
+            R.id.platformLL, R.id.settingLL, R.id.message_number})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.image_tx:
@@ -129,9 +128,6 @@ public class ManageFragment extends BaseFragment {
                 break;
             case R.id.message_number:
                 startActivity(new Intent(getActivity(), NewMessageActivity.class));
-                break;
-            case R.id.linear_personnelManage:
-                startActivity(new Intent(getActivity(), PersonnelManageActivity.class));
                 break;
         }
     }
